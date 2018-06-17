@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family:Gill Sans, Gill Sans MT, Myriad Pro, DejaVu Sans Condensed, Helvetica, Arial," sans-serif"sans-serif, "微軟正黑體";
+	margin:0;
+	padding:0;
+	background:#fff;
+}
+
+/*header*/
+header{
+	position:fixed;
+	width:100%;/*鋪滿寬度*/
+	top:0;
+	padding:5px;
+	box-sizing:border-box;
+	background:rgba(0,0,0,0.8);
+	z-index:100000;/*在第幾層，數字越大越上面，因為這個一定是置頂所以隨便打一個超大的數字*/
+}
+
+/* nav bar */
+nav{
+	width:100%;
+	margin:auto;
+	text-align:left;
+}
+
+nav ul{
+	margin-left:20; 
+}
+
+nav li{
+	display: inline-block;
+	padding-left: 0;
+}
+
+nav li a{
+	left: 0px;
+	padding:8px;
+	color: #fff;
+	text-decoration:none;  
+}
+
+nav li a:hover{
+	color: rgba(0, 47, 255,1);
+	text-decoration-line:none;
+}
+
+/*section（容器）*/
+section{
+	position: relative;
+	width:100%;
+	height:840px;
+	overflow: hidden; /*將多出的內容隱藏*/
+	margin:0px auto 0px; /*上80、左右置中、在容器中置底*/
+}
+
+li a:hover{
+	color: rgba(0, 47, 255,1);
+	text-decoration-line:none;
+}
+
+.right2, .right{ /*, .可以一次寫兩個，這裡規範的是圖片跟橘色文字框框*/
+	position: absolute;
+	box-sizing: border-box;
+}
+.right{
+	width:100%; /*鋪滿的橫向面積*/
+	right:0; /*置右*/
+	top:10px;
+}
+.right2{
+	width:40%;
+	top:250px;
+	left:100px;
+	background: rgba(0, 47, 255,0.9);
+	padding: 20px;/*因為已經有容器了，所以這個padding是往內縮不是往外長胖*/
+	z-index: 20;/*順序*/
+}
+
+
+/*article*/
+article{
+	width: 90%;
+	margin: auto;
+	margin-top: 50px;/*margin-bottom如果要改數字的話 必須鎖死article的高度 margin-top是從物件的頭往上算，margin-bottom是從物件的尾巴開始算，沒有鎖死這個東西的高度height:blablapx的話，系統不知道物件的尾巴在哪*/
+}
+.card{
+	float: left;/*從左邊開始排*/
+	box-sizing: border-box;/*希望不會被改變寬度的時候加*/
+	width: 33.33%;
+	min-width: 300px;/*最小值（當螢幕縮到超小的時候，直接顯示最小值而非前面設置的%數）*/
+	background: rgba(0,0,0,0.8);
+	text-align: center;
+	border: solid 8px #fff;
+	padding: 10px 10px;/*上下長胖左右不長胖（橘橘的那個）*/
+	color: #FFFFFF;
+	transition: background 0.5s, color 0.5s;/*s是second的意思，可以決定變色速度，很讚*/
+	-webkit-transition: background 0.5s, color 0.5s;/*-webkit-是前綴詞，迎合不同瀏覽器*/
+	/*For safari 3.1 to 6.0 */
+}
+
+.card:hover{
+	cursor:pointer;/*滑鼠滑過去變手指*/
+	color:#fff;
+	background:rgba(0, 47, 255,1);
+}
+
+
+/*aside*/
+aside{
+	clear:both;/*取消float*/
+	width:100%;/*ASKKKK*/
+	margin-top: 100px;
+}
+.wraptext{
+	float:left;/*至左*/
+	width:50%;
+	box-sizing: border-box;
+	padding: 20px;
+	background: #fff;
+	border: solid 5px #fff;
+	color: rgba(97,97,97,1.00);
+}
+.wraptext p{
+	font-size:10pt;
+	line-height:1.5em;/*行距*/
+}
+.wraptext img{
+	float:right;
+}
+
+/*footer*/
+footer{
+	font-size:10pt;
+	clear:both;
+	padding:20px 0px;
+	text-align: center;
+}
+
+/*float item*/
+#logo{
+	float:left;
+}
+#fb{
+	float:right;
+}
